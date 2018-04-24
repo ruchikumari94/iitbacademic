@@ -1,0 +1,11 @@
+name: Demo
+type: profile
+description: 'My Useful Profile'
+core: 8.x
+
+distribution:
+  name: 'My Kick-ass Distribution'
+
+dependencies:
+  - 'coffee'
+  - 'admin_toolbar'

@@ -1,0 +1,26 @@
+{
+    "name": "iitb/demo",
+    "description": "Drupal is an open source content management platform powering millions of websites and applications.",
+    "type": "drupal-profile",
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+	"composer/installers": "^1.0.24",
+        "drupal/admin_toolbar" : "1.8.0"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "extra": {
+	"installer-paths": {
+            "docroot/core": ["type:drupal-core"],
+	    "modules/contrib/{$name}": [
+                "type:drupal-module"
+            ]
+	}
+    }
+}
