@@ -1,0 +1,13 @@
+name: iitbacademic
+core: 8.x
+type: profile
+description: 'IITB Academic Profile'
+version: '8.x-1.0'
+
+distribution:
+  name: 'IITB Academic Distribution'
+
+dependencies:
+  - 'coffee'
+  - 'admin_toolbar'
+  - 'iitb_academic_faculty'
