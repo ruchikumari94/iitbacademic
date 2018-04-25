@@ -6,7 +6,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-	"composer/installers": "^1.0.24",
+	   "composer/installers": "^1.0.24",
         "drupal/admin_toolbar" : "1.8.0"
     },
     "repositories": [
@@ -16,11 +16,8 @@
         }
     ],
     "extra": {
-	"installer-paths": {
-            "docroot/core": ["type:drupal-core"],
-	    "modules/contrib/{$name}": [
-                "type:drupal-module"
-            ]
-	}
+    	"installer-paths": {
+                
+    	}
     }
 }
