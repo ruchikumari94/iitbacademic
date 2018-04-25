@@ -8,6 +8,5 @@ distribution:
   name: 'IITB Academic Distribution'
 
 dependencies:
-  - 'coffee'
   - 'admin_toolbar'
   - 'iitb_academic_faculty'
