@@ -1,0 +1,9 @@
+uuid: bf674f80-fc41-4c0f-a684-4309480c119f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Research Area'
+vid: research_area
+description: 'Title related to Research Topics'
+hierarchy: 0
+weight: 0

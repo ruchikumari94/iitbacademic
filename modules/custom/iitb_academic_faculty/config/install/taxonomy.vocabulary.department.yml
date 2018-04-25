@@ -1,0 +1,9 @@
+uuid: 3147eece-7f02-4017-9965-f475220d6d01
+langcode: en
+status: true
+dependencies: {  }
+name: Department
+vid: department
+description: 'Types of Department'
+hierarchy: 0
+weight: 0
