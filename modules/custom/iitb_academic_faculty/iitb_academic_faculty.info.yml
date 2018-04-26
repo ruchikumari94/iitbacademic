@@ -4,6 +4,15 @@ description: 'My Awesome Module'
 core: 8.x
 package: 'Custom'
 dependencies:
-  - views
-  - block
-  - user
+  - 'views'
+  - 'block'
+  - 'user'
+  - 'field'
+  - 'taxonomy'
+  - 'node'
+  - 'text'
+  - 'path'
+  - 'menu_ui'
+  - 'name'
+  - 'token'
+
