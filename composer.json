@@ -7,7 +7,7 @@
     "prefer-stable": true,
     "require": {
 	   "composer/installers": "^1.0.24",
-        "drupal/admin_toolbar" : "1.x-dev"
+        "drupal/admin_toolbar" : "dev-8.x-1.x"
     },
     "repositories": [
         {
