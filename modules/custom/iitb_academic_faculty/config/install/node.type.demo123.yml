@@ -7,9 +7,9 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: Faculty
-type: faculty
-description: 'Details about faculty.'
+name: Demo123
+type: demo123
+description: ''
 help: ''
 new_revision: false
 preview_mode: 1

@@ -3,13 +3,13 @@ status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.faculty
+    - node.type.demo123
   module:
     - text
-id: node.faculty.body
+id: node.demo123.body
 field_name: body
 entity_type: node
-bundle: faculty
+bundle: demo123
 label: Body
 description: ''
 required: false
