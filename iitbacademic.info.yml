@@ -43,7 +43,7 @@ dependencies:
   - views_ui
   - tour
   - automated_cron
-  
+ #contrib 
   - admin_toolbar
   - iitb_academic_faculty
 themes:

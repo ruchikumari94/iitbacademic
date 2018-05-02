@@ -2,22 +2,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - comment.type.comment
-    - field.field.comment.comment.comment_body
+    - field.field.node.demo123.body
+    - node.type.demo123
   module:
     - text
-id: comment.comment.default
-targetEntityType: comment
-bundle: comment
+    - user
+id: node.demo123.default
+targetEntityType: node
+bundle: demo123
 mode: default
 content:
-  comment_body:
+  body:
     label: hidden
     type: text_default
-    weight: 0
-    region: content
+    weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
   links:
     weight: 100
     region: content
