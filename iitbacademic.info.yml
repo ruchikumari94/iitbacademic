@@ -48,4 +48,5 @@ dependencies:
   - iitb_academic_faculty
 themes:
   - bartik
+  - seven
   
