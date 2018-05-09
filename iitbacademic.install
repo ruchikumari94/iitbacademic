@@ -18,7 +18,9 @@ function iitbacademic_install() {
   standard_install();
   \Drupal::service('theme_handler')->setDefault('bartik');
   // Enable the admin theme.
-  \Drupal::configFactory()->getEditable('node.settings')->set('seven', TRUE)->save(TRUE);
+  //\Drupal::configFactory()->getEditable('node.settings')->set('seven', TRUE)->save(TRUE);
+  // Set it as the admin theme
+  \Drupal::service('config.factory')->getEditable('system.theme')->set('admin', 'seven')->save();
 
   // Add code here to make nodes, terms, etc.
   // Set front page to "node".
