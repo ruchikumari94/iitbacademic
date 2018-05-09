@@ -1,5 +1,9 @@
 <?php
 
+use Drupal\Core\Form\FormStateInterface;
+
+include_once __DIR__ . '/src/Form/IITBDistributionOptionalModulesForm.php';
+
 /**
  * @file
  * Enables modules and site configuration for the Demo profile.
@@ -11,15 +15,14 @@ function iitbacademic_install_tasks_alter(&$tasks, $install_state) {
   // Replace the entire site configuration form provided by Drupal core
   // with a custom callback function defined by this installation profile.
   //$tasks['install_configure_form']['function'] = 'myprofile_install_configure_form';
-	// Site Informaton Details
-  //$form['site_information']['site_name']['#default_value'] = 'admin';
-  //$form['site_information']['site_mail']['#default_value'] = 'iitbacacdemic@example.com';
-  // Account information defaults
-  //$form['admin_account']['account']['name']['#default_value'] = 'admin';
-  //$form['admin_account']['account']['mail']['#default_value'] = 'admin@example.com';
-
-  // Date/time settings
-  //$form['regional_settings']['site_default_country']['#default_value'] = 'IN';
-  //$form['regional_settings']['date_default_timezone']['#default_value'] = 'Asia/Kolkata';
-
+	//echo '<pre>';
+  //print_r($install_state);
+  $tasks=array();
+  $tasks['i_i_t_b_distribution_optional_modules_form'] = [
+      'display_name' => t('Install IITB Modules'),
+      'type' => 'form',
+      '#title' => 'form',
+      'function' => 'Drupal\academicdistprofile\Form\IITBDistributionOptionalModulesForm',
+    ];
+  return $tasks;
 }

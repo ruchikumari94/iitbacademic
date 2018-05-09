@@ -45,7 +45,8 @@ dependencies:
   - automated_cron
  #contrib 
   - admin_toolbar
-  - iitb_academic_faculty
+  - name
+  - token
 themes:
   - bartik
   - seven
