@@ -17,11 +17,10 @@ function iitbacademic_install_tasks_alter(&$tasks, $install_state) {
   //$tasks['install_configure_form']['function'] = 'myprofile_install_configure_form';
 	//echo '<pre>';
   //print_r($install_state);
-  $tasks=array();
+  //$tasks=array();
   $tasks['i_i_t_b_distribution_optional_modules_form'] = [
       'display_name' => t('Install IITB Modules'),
       'type' => 'form',
-      '#title' => 'form',
       'function' => 'Drupal\iitbacademic\Form\IITBDistributionOptionalModulesForm',
     ];
   return $tasks;
