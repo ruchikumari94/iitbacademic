@@ -18,4 +18,33 @@ function iitbacademic_install() {
   standard_install();
 
   // Add code here to make nodes, terms, etc.
+  // Set front page to "node".
+  //\Drupal::configFactory()->getEditable('system.site')->set('page.front', '/home')->save(TRUE);
+
+  // Assign user 1 the "developer" role.
+  //$user = User::load(1);
+  //$user->roles[] = 'administrator';
+  //$user->save();
+
+  // Enable the admin theme.
+  //\Drupal::configFactory()->getEditable('node.settings')->set('use_admin_theme', TRUE)->save(TRUE);
+
+  // Creating users with this role.
+  //$user_add = User::create();
+  //$user_add->setUsername('Tom');
+  //$user_add->setEmail('tom@example.com');
+  //$user_add->setPassword(user_password());
+  //$user_add->enforceIsNew();
+  //$user_add->activate();
+  //$user_add->roles[] = 'developer';
+  //$user_save = $user_add->save();
+
+  //$user_add = User::create();
+  //$user_add->setUsername('Harry');
+  //$user_add->setEmail('harry@example.com');
+  //$user_add->setPassword(user_password());
+  //$user_add->enforceIsNew();
+  //$user_add->activate();
+  //$user_add->roles[] = 'developer';
+  //$user_save = $user_add->save();
 }
