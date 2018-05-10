@@ -63,7 +63,7 @@ class IITBDistributionOptionalModulesForm extends FormBase {
           //drupal_set_message($key1 . ': ' . $value1);
           if($value1!='0') {
             //If checked only then enable module
-            \Drupal::service('module_installer')->install($value1);
+            \Drupal::service('module_installer')->install(array($value1));
           }
         }
       }
