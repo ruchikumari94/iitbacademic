@@ -33,7 +33,7 @@ class IITBDistributionOptionalModulesForm extends FormBase {
       '#type' => 'checkboxes',
       '#title' => $this->t('Select Features'),
       '#description' => $this->t('Select Optional Features To Install'),
-      '#options' => ['iitb_academic_faculty' => $this->t('Faculty'), 'm2' => $this->t('m2')],
+      '#options' => ['iitb_academic_faculty' => $this->t('Faculty'), 'iitb_academic_department' => $this->t('Department')],
       '#default_value' => Array(),
       '#weight' => '0',
     ];
@@ -61,9 +61,9 @@ class IITBDistributionOptionalModulesForm extends FormBase {
       if($key=='select_modules') {
         foreach ($value as $key1 => $value1) {
           //drupal_set_message($key1 . ': ' . $value1);
-          if($value1!=0) {
+          if($value1!='0') {
             //If checked only then enable module
-            \Drupal::service('module_installer')->install($value);
+            \Drupal::service('module_installer')->install($value1);
           }
         }
       }
