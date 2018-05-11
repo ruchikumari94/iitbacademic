@@ -50,4 +50,5 @@ dependencies:
 themes:
   - bartik
   - seven
-  
+  - bootstrap
+  - academix

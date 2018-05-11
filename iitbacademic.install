@@ -16,11 +16,11 @@ function iitbacademic_install() {
   // First, do everything that is done in the standard profile.
   include_once DRUPAL_ROOT . '/core/profiles/standard/standard.install';
   standard_install();
-  \Drupal::service('theme_handler')->setDefault('bartik');
+  //\Drupal::service('theme_handler')->setDefault('academix');
   // Enable the admin theme.
   //\Drupal::configFactory()->getEditable('node.settings')->set('seven', TRUE)->save(TRUE);
   // Set it as the admin theme
-  \Drupal::service('config.factory')->getEditable('system.theme')->set('admin', 'seven')->save();
+  //\Drupal::service('config.factory')->getEditable('system.theme')->set('admin', 'seven')->save();
 
   // Add code here to make nodes, terms, etc.
   // Set front page to "node".
