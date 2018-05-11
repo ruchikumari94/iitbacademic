@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Research Area'
+vid: research_area
+description: 'Title related to Research Topics'
+hierarchy: 0
+weight: 0
