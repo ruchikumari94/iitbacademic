@@ -2,14 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.demo456.body
-    - node.type.demo456
+    - field.field.node.department.body
+    - field.field.node.department.field_dept_cnum
+    - field.field.node.department.field_dept_email
+    - field.field.node.department.field_dept_info
+    - node.type.department
   module:
     - path
     - text
-id: node.demo456.default
+id: node.department.default
 targetEntityType: node
-bundle: demo456
+bundle: department
 mode: default
 content:
   body:
@@ -27,6 +30,29 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_dept_cnum:
+    weight: 124
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_dept_email:
+    weight: 123
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_dept_info:
+    weight: 125
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   path:
     type: path
     weight: 30

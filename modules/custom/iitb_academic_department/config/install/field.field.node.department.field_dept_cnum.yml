@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dept_cnum
+    - node.type.department
+id: node.department.field_dept_cnum
+field_name: field_dept_cnum
+entity_type: node
+bundle: department
+label: 'Dept ContNum'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

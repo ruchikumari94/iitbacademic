@@ -3,14 +3,14 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.demo456.body
-    - node.type.demo456
+    - field.field.node.department.body
+    - node.type.department
   module:
     - text
     - user
-id: node.demo456.teaser
+id: node.department.teaser
 targetEntityType: node
-bundle: demo456
+bundle: department
 mode: teaser
 content:
   body:
