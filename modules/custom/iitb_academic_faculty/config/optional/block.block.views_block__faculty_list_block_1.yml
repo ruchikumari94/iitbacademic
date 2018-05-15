@@ -7,9 +7,9 @@ dependencies:
     - system
     - views
   theme:
-    - bootstrap
+    - academix
 id: views_block__faculty_list_block_1
-theme: bootstrap
+theme: academix
 region: content
 weight: 0
 provider: null
