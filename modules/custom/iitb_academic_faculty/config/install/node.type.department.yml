@@ -1,4 +1,4 @@
-uuid: 94992a91-b315-4428-bd4e-7a31ea8e59fc
+uuid: eacd4785-e3be-4d70-afc3-a5279ef7c80f
 langcode: en
 status: true
 dependencies:
@@ -6,11 +6,12 @@ dependencies:
     - menu_ui
 third_party_settings:
   menu_ui:
-    available_menus: {  }
-    parent: ''
-name: Faculty
-type: faculty
-description: 'Details about faculty.'
+    available_menus:
+      - main
+    parent: 'main:'
+name: Department
+type: department
+description: ''
 help: ''
 new_revision: false
 preview_mode: 1
