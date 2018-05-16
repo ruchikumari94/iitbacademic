@@ -5,7 +5,6 @@ dependencies:
     - field.field.node.faculty.body
     - field.field.node.faculty.field_contact_no
     - field.field.node.faculty.field_department
-    - field.field.node.faculty.field_department_ref
     - field.field.node.faculty.field_designation
     - field.field.node.faculty.field_email_id
     - field.field.node.faculty.field_full_name
@@ -45,15 +44,6 @@ content:
     region: content
   field_department:
     weight: 127
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_department_ref:
-    weight: 129
     settings:
       match_operator: CONTAINS
       size: 60
