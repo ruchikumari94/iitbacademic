@@ -1,5 +1,6 @@
 <?php
 
+use \Drupal\node\Entity\Node;
 /**
  * @file
  * Install, update and uninstall hooks for the Demo install profile.
@@ -52,4 +53,23 @@ function iitbacademic_install() {
   //$user_add->activate();
   //$user_add->roles[] = 'developer';
   //$user_save = $user_add->save();
+
+  $node = Node::create([
+   'type' => 'page',
+   'title' => 'About Us',
+   'body' => array(
+     'value' =>"Established in 1958, the second of its kind, IIT Bombay was the first to be set up with foreign assistance. The funds from UNESCO came as Roubles from the then Soviet Union. In 1961 Parliament decreed the  IITs as  ‘Institutes of National Importance'. Since then, IITB has grown from strength to strength to emerge as one of the top technical universities in the world.
+
+        The institute is recognised worldwide as a leader in the field of engineering education and research. Reputed for the outstanding calibre of students graduating from its undergraduate and postgraduate programmes, the institute attracts the best students from the country for its bachelor's, master's and doctoral programmes. Research and academic programmes at IIT Bombay are driven by an outstanding faculty, many of whom are reputed for their research contributions internationally.
+
+        IIT Bombay also builds links with peer universities and institutes, both at the national and the international levels, to enhance research and enrich its educational programmes. The alumni have distinguished themselves through their achievements in and contributions to industry, academics, research, business, government and social domains. The institute continues to work closely with the alumni to enhance its activities through interactions in academic and research programmes as well as to mobilise financial support.
+
+        Over the years, the institute has created a niche for its innovative short-term courses through continuing education and distance education programmes. Members of the faculty of the institute have won many prestigious awards and recognitions, including the Shanti Swaroop Bhatnagar and Padma awards.
+
+        Located in Powai, one of the northern suburbs of Mumbai, the residents of the institute reap the advantage of being in the busy financial capital of India, while at the same time enjoying the serenity of a campus known for its natural beauty. A fully residential institute, all its students are accommodated in its 15 hostels with in-house dining; the campus also provides excellent amenities for sports and other recreational facilities.",
+      'format' => 'full_html',
+    ),
+  ]);  
+
+  $node->save();
 }
