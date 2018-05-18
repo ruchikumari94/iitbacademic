@@ -1,6 +1,7 @@
 <?php
 
 use \Drupal\node\Entity\Node;
+use Drupal\taxonomy\Entity\Term;
 /**
  * @file
  * Install, update and uninstall hooks for the Demo install profile.
@@ -72,4 +73,9 @@ function iitbacademic_install() {
   ]);  
 
   $node->save();
+
+  $term =Term::create([
+  'name' => 'term 1',
+  'vid' => 'department',
+  ])->save();
 }

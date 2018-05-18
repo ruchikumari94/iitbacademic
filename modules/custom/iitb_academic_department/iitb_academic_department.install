@@ -1,0 +1,249 @@
+<?php
+
+use Drupal\Core\Entity\Entity\EntityViewDisplay;
+use Drupal\field\Entity\FieldConfig;
+
+function iitb_academic_department_install() {
+	$new_field_array=array(
+		'id'=> 'field_department_ref',
+		'table'=> 'node__field_department_ref',
+		'field'=> 'field_department_ref',
+		'relationship'=> 'none',
+		'group_type'=> 'group',
+		'admin_label'=> '',
+		'label'=> '',
+		'exclude'=> 'false',
+		'alter'=> array(
+		'alter_text'=> 'false',
+		'text'=> '',
+		'make_link'=> 'false',
+		'path'=> '',
+		'absolute'=> 'false',
+		'external'=> 'false',
+		'replace_spaces'=> 'false',
+		'path_case'=> 'none',
+		'trim_whitespace'=> 'false',
+		'alt'=> '',
+		'rel'=> '',
+		'link_class'=> '',
+		'prefix'=> '',
+		'suffix'=> '',
+		'target'=> '',
+		'nl2br'=> 'false',
+		'max_length'=> 0,
+		'word_boundary'=> 'true',
+		'ellipsis'=> 'true',
+		'more_link'=> 'false',
+		'more_link_text'=> '',
+		'more_link_path'=> '',
+		'strip_tags'=> 'false',
+		'trim'=> 'false',
+		'preserve_tags'=> '',
+		'html'=> 'false',
+		),
+		'element_type'=> '',
+		'element_class'=> '',
+		'element_label_type'=> '',
+		'element_label_class'=> '',
+		'element_label_colon'=> 'false',
+		'element_wrapper_type'=> '',
+		'element_wrapper_class'=> '',
+		'element_default_classes'=> 'true',
+		'empty'=> '',
+		'hide_empty'=> 'false',
+		'empty_zero'=> 'false',
+		'hide_alter_empty'=> 'true',
+		'click_sort_column'=> 'target_id',
+		'type'=> 'entity_reference_label',
+		'settings'=> array(
+		'link'=> 'true',
+		),
+		'group_column'=> 'target_id',
+		'group_columns'=> array(),
+		'group_rows'=> 'true',
+		'delta_limit'=> 0,
+		'delta_offset'=> 0,
+		'delta_reversed'=> 'false',
+		'delta_first_last'=> 'false',
+		'multi_type'=> 'separator',
+		'separator'=> ', ',
+		'field_api_classes'=> 'false',
+		'plugin_id'=> 'field',
+	);
+
+	$config_faculty_list = \Drupal::config('views.view.faculty_list');
+	//drupal_set_message(print_r($config1->get('display.default')));
+	//drupal_set_message($config1->get('core'));
+
+	$faculty_list_dependencies=$config_faculty_list->get('dependencies');
+	if (!in_array("field.storage.node.field_department_ref", $faculty_list_dependencies['config'])) {
+		array_push($faculty_list_dependencies['config'], 'field.storage.node.field_department_ref');
+	}
+
+	$faculty_list_tags=$config_faculty_list->get('display.default.cache_metadata.tags');
+	if (!in_array("config:field.storage.node.field_department_ref",$faculty_list_tags)){
+		array_push($faculty_list_tags, 'config:field.storage.node.field_department_ref');
+	}
+
+	$faculty_list_block_tags=$config_faculty_list->get('display.block_1.cache_metadata.tags');
+	if (!in_array("config:field.storage.node.field_department_ref",$faculty_list_block_tags)){
+		array_push($faculty_list_block_tags, 'config:field.storage.node.field_department_ref');
+	}
+
+	$faculty_list_fields=$config_faculty_list->get('display.default.display_options.fields');
+	//if (!array_key_exists("field_department_ref",$faculty_list_fields)){
+		$faculty_list_fields['field_department_ref']= $new_field_array;
+	//}
+
+	\Drupal::configFactory()
+    ->getEditable('views.view.faculty_list')
+    ->set('label', 'Faculty List 2')
+    ->set('dependencies',$faculty_list_dependencies)
+    ->set('display.default.cache_metadata.tags',$faculty_list_tags)
+    ->set('display.block_1.cache_metadata.tags',$faculty_list_block_tags)
+    ->set('display.default.display_options.fields',$faculty_list_fields)
+    ->save(TRUE);
+
+  /* ********************************************************************************************* */
+
+  $config_faculty_view_display = \Drupal::config('core.entity_view_display.node.faculty.default');
+
+  $config_faculty_view_display_dependencies=$config_faculty_view_display->get('dependencies');
+	if (!in_array("field.field.node.faculty.field_department_ref", $config_faculty_view_display_dependencies['config'])) {
+		array_push($config_faculty_view_display_dependencies['config'], 'field.field.node.faculty.field_department_ref');
+	}
+
+	$new_field_array_view_display= array(
+		'weight'=> 109,
+    'label'=> 'above',
+    'settings'=> array(
+      'link'=> 'true',
+    ),
+    'third_party_settings'=> array(),
+    'type'=> 'entity_reference_label',
+    'region'=> 'content',
+	);
+
+	$config_faculty_view_display_fields=$config_faculty_view_display->get('content');
+	//if (!array_key_exists("field_department_ref",$config_faculty_view_display_fields)){
+		$config_faculty_view_display_fields['field_department_ref']= $new_field_array_view_display;
+	//}
+
+  \Drupal::configFactory()
+    ->getEditable('core.entity_view_display.node.faculty.default')
+    ->set('dependencies',$config_faculty_view_display_dependencies)
+    ->set('content',$config_faculty_view_display_fields)
+    ->save(TRUE);
+
+  /* ********************************************************************************************* */
+
+  $config_faculty_form_display = \Drupal::config('core.entity_form_display.node.faculty.default');
+
+  $config_faculty_form_display_dependencies=$config_faculty_form_display->get('dependencies');
+	if (!in_array("field.field.node.faculty.field_department_ref", $config_faculty_form_display_dependencies['config'])) {
+		array_push($config_faculty_form_display_dependencies['config'], 'field.field.node.faculty.field_department_ref');
+	}
+
+  $new_field_array_form_display= array(
+		'weight'=> 129,
+    'settings'=> array(
+      'match_operator'=> 'CONTAINS',
+      'size'=> 60,
+      'placeholder'=> '',
+    ),
+    'third_party_settings'=> array(),
+    'type'=> 'entity_reference_autocomplete',
+    'region'=> 'content',
+	);
+	
+	$config_faculty_form_display_fields=$config_faculty_form_display->get('content');
+	//if (!array_key_exists("field_department_ref",$config_faculty_form_display_fields)){
+		$config_faculty_form_display_fields['field_department_ref']= $new_field_array_form_display;
+	//}
+
+  \Drupal::configFactory()
+    ->getEditable('core.entity_form_display.node.faculty.default')
+    ->set('dependencies',$config_faculty_form_display_dependencies)
+    ->set('content',$config_faculty_form_display_fields)
+    ->save(TRUE);
+
+}
+
+function iitb_academic_department_uninstall() {
+	$config_faculty_list = \Drupal::config('views.view.faculty_list');
+
+	$faculty_list_dependencies=$config_faculty_list->get('dependencies');
+	if (($key = array_search('field.storage.node.field_department_ref', $faculty_list_dependencies['config'])) !== false) {
+		unset($faculty_list_dependencies['config'][$key]);
+	}
+
+	$faculty_list_tags=$config_faculty_list->get('display.default.cache_metadata.tags');
+	if (($key = array_search('config:field.storage.node.field_department_ref', $faculty_list_tags)) !== false) {
+		unset($faculty_list_tags[$key]);
+	}
+
+	$faculty_list_block_tags=$config_faculty_list->get('display.block_1.cache_metadata.tags');
+	if (($key = array_search('config:field.storage.node.field_department_ref', $faculty_list_block_tags)) !== false) {
+		unset($faculty_list_block_tags[$key]);
+	}
+
+	$faculty_list_fields=$config_faculty_list->get('display.default.display_options.fields');
+	if (array_key_exists("field_department_ref",$faculty_list_fields)){
+		unset($faculty_list_fields['field_department_ref']);
+	}
+
+	\Drupal::configFactory()
+    ->getEditable('views.view.faculty_list')
+    ->set('label', 'Faculty List')
+    ->set('dependencies',$faculty_list_dependencies)
+    ->set('display.default.cache_metadata.tags',$faculty_list_tags)
+    ->set('display.block_1.cache_metadata.tags',$faculty_list_block_tags)
+    ->set('display.default.display_options.fields',$faculty_list_fields)
+    ->save(TRUE);
+
+  /* ********************************************************************************************* */
+
+  $config_faculty_view_display = \Drupal::config('core.entity_view_display.node.faculty.default');
+
+  $config_faculty_view_display_dependencies=$config_faculty_view_display->get('dependencies');
+	if (($key = array_search('field.field.node.faculty.field_department_ref', $config_faculty_view_display_dependencies['config'])) !== false) {
+		unset($config_faculty_view_display_dependencies['config'][$key]);
+	}
+
+	$config_faculty_view_display_fields=$config_faculty_view_display->get('content');
+	if (array_key_exists("field_department_ref",$config_faculty_view_display_fields)){
+		unset($config_faculty_view_display_fields['field_department_ref']);
+	}
+
+  \Drupal::configFactory()
+    ->getEditable('core.entity_view_display.node.faculty.default')
+    ->set('dependencies',$config_faculty_view_display_dependencies)
+    ->set('content',$config_faculty_view_display_fields)
+    ->save(TRUE);
+
+  /* ********************************************************************************************* */
+
+  $config_faculty_form_display = \Drupal::config('core.entity_form_display.node.faculty.default');
+  
+  $config_faculty_form_display_dependencies=$config_faculty_form_display->get('dependencies');
+	if (($key = array_search('field.field.node.faculty.field_department_ref', $config_faculty_form_display_dependencies['config'])) !== false) {
+		unset($config_faculty_form_display_dependencies['config'][$key]);
+	}
+
+	$config_faculty_form_display_fields=$config_faculty_form_display->get('content');
+	if (array_key_exists("field_department_ref",$config_faculty_form_display_fields)){
+		unset($config_faculty_form_display_fields['field_department_ref']);
+	}
+
+  \Drupal::configFactory()
+    ->getEditable('core.entity_form_display.node.faculty.default')
+    ->set('dependencies',$config_faculty_form_display_dependencies)
+    ->set('content',$config_faculty_form_display_fields)
+    ->save(TRUE);
+
+  /* ********************************************************************************************* */
+
+  \Drupal::configFactory()->getEditable('node.type.department')->delete();
+  \Drupal::configFactory()->getEditable('field.field.node.faculty.field_department_ref')->delete();
+  \Drupal::configFactory()->getEditable('field.storage.node.field_department_ref')->delete();
+}
