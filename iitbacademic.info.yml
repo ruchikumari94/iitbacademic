@@ -47,6 +47,7 @@ dependencies:
   - admin_toolbar
   - name
   - token
+  - smtp
 themes:
   - bartik
   - seven
