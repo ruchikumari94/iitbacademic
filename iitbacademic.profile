@@ -58,3 +58,35 @@ function iitbacademic_array_move($which, $where, $array) {
     iitbacademic_array_splice_assoc($array, $where, 0, $tmp);
     return $array;
 }
+
+function iitbacademic_form_install_configure_form_alter(&$form, $form_state) {
+
+  //echo '<pre>';
+  //print_r($form);
+
+  $form['site_information']['site_name']['#default_value'] = t('IITB Academic Distribution');
+
+  $form['site_information']['site_mail']['#default_value'] = t('kumari.ruchi320@gmail.com');
+
+  $form['admin_account']['account']['name']['#default_value'] = t('admin');
+
+  $form['admin_account']['account']['pass']['pass1']['#default_value'] = t('admin');
+
+  $form['admin_account']['account']['pass']['pass2']['#default_value'] = t('admin');
+
+  $form['admin_account']['account']['mail']['#default_value'] = t('kumari.ruchi320@gmail.com');
+
+  $form['regional_settings']['site_default_country']['#default_value'] = 'IN';
+
+  $form['regional_settings']['date_default_timezone']['#default_value'] = 'Asia/Kolkata';
+}
+
+function iitbacademic_form_install_settings_form_alter(&$form, $form_state) {
+  //echo '<pre>';
+  //print_r($form);
+  $form['settings']['mysql']['database']['#default_value'] = 'iitbacademic';
+
+  $form['settings']['mysql']['username']['#default_value'] = 'root';
+
+  $form['settings']['mysql']['password']['#default_value'] = '123';
+}
