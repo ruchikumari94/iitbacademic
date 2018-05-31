@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_qualexp
+    - node.type.fac_page
+  module:
+    - text
+id: node.fac_page.field_qualexp
+field_name: field_qualexp
+entity_type: node
+bundle: fac_page
+label: Background
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

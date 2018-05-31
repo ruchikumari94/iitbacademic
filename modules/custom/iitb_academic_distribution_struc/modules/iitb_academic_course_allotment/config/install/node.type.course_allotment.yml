@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Course Allotment'
+type: course_allotment
+description: 'Allot a course schedule: with details of  semester, Instructor,  TAs, slot etc.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

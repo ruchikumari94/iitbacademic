@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_room_no
+    - node.type.fac_page
+id: node.fac_page.field_room_no
+field_name: field_room_no
+entity_type: node
+bundle: fac_page
+label: 'Room No'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,180 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.fac_page.body
+    - field.field.node.fac_page.field_affiliation
+    - field.field.node.fac_page.field_awards
+    - field.field.node.fac_page.field_building
+    - field.field.node.fac_page.field_category
+    - field.field.node.fac_page.field_coursestaught
+    - field.field.node.fac_page.field_detailed_info_link
+    - field.field.node.fac_page.field_email
+    - field.field.node.fac_page.field_facdesg
+    - field.field.node.fac_page.field_full_name
+    - field.field.node.fac_page.field_mobile
+    - field.field.node.fac_page.field_phone
+    - field.field.node.fac_page.field_photo
+    - field.field.node.fac_page.field_projects
+    - field.field.node.fac_page.field_publications_link
+    - field.field.node.fac_page.field_qualexp
+    - field.field.node.fac_page.field_room_no
+    - node.type.fac_page
+  module:
+    - image
+    - link
+    - name
+    - options
+    - text
+    - user
+id: node.fac_page.default
+targetEntityType: node
+bundle: fac_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_affiliation:
+    weight: 111
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_awards:
+    weight: 112
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_building:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_category:
+    weight: 113
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_coursestaught:
+    weight: 117
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_detailed_info_link:
+    weight: 109
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_email:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_facdesg:
+    weight: 114
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_full_name:
+    weight: 103
+    label: above
+    settings:
+      format: default
+      markup: false
+      output: default
+      multiple: default
+      multiple_delimiter: ', '
+      multiple_and: text
+      multiple_delimiter_precedes_last: never
+      multiple_el_al_min: '3'
+      multiple_el_al_first: '1'
+    third_party_settings: {  }
+    type: name_default
+    region: content
+  field_mobile:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_phone:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_photo:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_projects:
+    weight: 116
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_publications_link:
+    weight: 115
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_qualexp:
+    weight: 110
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_room_no:
+    weight: 104
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

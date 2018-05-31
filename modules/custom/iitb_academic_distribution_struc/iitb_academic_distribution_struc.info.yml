@@ -1,0 +1,10 @@
+name: 'IITB Academic Distribution Structure'
+type: module
+description: 'IITB Academic Distribution Default Content Types'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - name
+  - text
+  - iitb_academic_course_allotment
+  - iitb_academic_faculty_page

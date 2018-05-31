@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_acad_year
+    - node.type.course_allotment
+  module:
+    - datetime
+id: node.course_allotment.field_acad_year
+field_name: field_acad_year
+entity_type: node
+bundle: course_allotment
+label: 'Academic Year'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

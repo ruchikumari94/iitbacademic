@@ -1,0 +1,28 @@
+<?php
+
+use Drupal\Core\Entity\Entity\EntityViewDisplay;
+use Drupal\field\Entity\FieldConfig;
+
+/**************************************************************/
+
+function iitb_academic_course_allotment_uninstall(){
+	
+/**************************************************************/
+
+	\Drupal::configFactory()->getEditable('core.entity_form_display.node.course_allotment.default')->delete();
+	\Drupal::configFactory()->getEditable('core.entity_view_display.node.course_allotment.default')->delete();
+	\Drupal::configFactory()->getEditable('core.entity_view_display.node.course_allotment.teaser')->delete();
+	\Drupal::configFactory()->getEditable('field.field.node.course_allotment.body')->delete();
+	\Drupal::configFactory()->getEditable('field.field.node.course_allotment.field_acad_year')->delete();
+	\Drupal::configFactory()->getEditable('field.field.node.course_allotment.field_course_slot')->delete();
+	\Drupal::configFactory()->getEditable('field.field.node.course_allotment.field_course_url')->delete();
+	\Drupal::configFactory()->getEditable('field.field.node.course_allotment.field_semester')->delete();
+	\Drupal::configFactory()->getEditable('field.storage.node.field_acad_year')->delete();
+	\Drupal::configFactory()->getEditable('field.storage.node.field_course_slot')->delete();
+	\Drupal::configFactory()->getEditable('field.storage.node.field_course_url')->delete();
+	\Drupal::configFactory()->getEditable('field.storage.node.field_semester')->delete();
+	\Drupal::configFactory()->getEditable('node.type.course_allotment')->delete();
+
+/**************************************************************/
+
+}

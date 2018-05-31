@@ -1,0 +1,14 @@
+{
+  "name": "drupal/iitb_academic_distribution_struc",
+  "type": "drupal-module",
+  "description": "IITB Academic Distribution Default Content Types",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/iitb_academic_distribution_struc",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/iitb_academic_distribution_struc",
+    "source": "http://cgit.drupalcode.org/iitb_academic_distribution_struc"
+  },
+  "require": { }
+}

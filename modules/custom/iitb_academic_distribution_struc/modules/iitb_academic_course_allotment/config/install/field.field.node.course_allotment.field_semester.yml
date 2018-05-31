@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_semester
+    - node.type.course_allotment
+  module:
+    - options
+id: node.course_allotment.field_semester
+field_name: field_semester
+entity_type: node
+bundle: course_allotment
+label: Semester
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer
