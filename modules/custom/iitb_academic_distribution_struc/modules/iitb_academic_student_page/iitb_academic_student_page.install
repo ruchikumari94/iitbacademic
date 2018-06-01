@@ -1,0 +1,166 @@
+<?php
+
+use Drupal\Core\Entity\Entity\EntityViewDisplay;
+use Drupal\field\Entity\FieldConfig;
+
+/**************************************************************/
+
+function iitb_academic_student_page_install() {
+
+  /**********************************************************************************/
+
+  $config_student_page_view_display = \Drupal::config('core.entity_view_display.node.course_allotment.default');
+
+  $config_student_page_view_display_dependencies=$config_student_page_view_display->get('dependencies');
+  if(!in_array("field.field.node.course_allotment.field_student_ta_s_ref",
+    $config_student_page_view_display_dependencies['config'])) {
+    array_push($config_student_page_view_display_dependencies['config'], 'field.field.node.course_allotment.field_student_ta_s_ref');
+    }
+
+      $new_field_array_view_display= array(
+          'weight'=> 108,
+          'label'=> 'above',
+          'settings'=> array(
+            'link'=> 'true',
+          ),
+          'third_party_settings'=> array(),
+          'type'=> 'entity_reference_label',
+          'region'=> 'content',
+      );
+
+      $config_student_page_view_display_fields=$config_student_page_view_display->get('content');
+      $config_student_page_view_display_fields['field_student_ta_s_ref']=$new_field_array_view_display;
+
+      \Drupal::configFactory()
+      ->getEditable('core.entity_view_display.node.course_allotment.default')
+      ->set('dependencies',$config_student_page_view_display_dependencies)
+      ->set('content',$config_student_page_view_display_fields)
+      ->save(TRUE);
+
+  /**********************************************************************************/
+
+  $config_student_page_form_display = \Drupal::config('core.entity_form_display.node.course_allotment.default');
+
+  $config_student_page_form_display_dependencies=$config_student_page_form_display->get('dependencies');
+  if(!in_array("field.field.node.course_allotment.field_student_ta_s_ref",
+    $config_student_page_form_display_dependencies['config'])) {
+    array_push($config_student_page_form_display_dependencies['config'], 'field.field.node.course_allotment.field_student_ta_s_ref');
+    }
+
+    $new_field_array_form_display= array(
+      'weight'=> 128,
+      'settings'=> array(
+          'match_operator'=> 'CONTAINS',
+          'size'=> 60,
+          'placeholder'=> ''
+        ),
+      'third_party_settings'=> array(),
+      'type'=> 'entity_reference_autocomplete',
+      'region'=> 'content',
+    );
+
+    $config_student_page_form_display_fields=$config_student_page_form_display->get('content');
+    $config_student_page_form_display_fields['field_student_ta_s_ref']=$new_field_array_form_display;
+
+    \Drupal::configFactory()
+    ->getEditable('core.entity_form_display.node.course_allotment.default')
+    ->set('dependencies',$config_student_page_form_display_dependencies)
+    ->set('content',$config_student_page_form_display_fields)
+    ->save(TRUE);
+
+    /**********************************************************************************/
+
+}
+
+function iitb_academic_student_page_uninstall() {
+
+  /**********************************************************************************/
+
+  $config_stduent_page_view_display = \Drupal::config('core.entity_view_display.node.course_allotment.default');
+
+  $config_student_page_form_display_dependencies=$config_stduent_page_view_display->get('dependencies');
+  if (($key = array_search('field.field.node.course_allotment.field_student_ta_s_ref', $config_student_page_form_display_dependencies['config'])) !== false) {
+    unset($config_student_page_form_display_dependencies['config'][$key]);
+  }
+
+  $config_student_page_view_display_fields=$config_stduent_page_view_display->get('content');
+  if (array_key_exists("field_student_ta_s_ref", $config_student_page_view_display_fields)){
+    unset($config_student_page_view_display_fields['field_student_ta_s_ref']);
+  }
+
+  \Drupal::configFactory()
+    ->getEditable('core.entity_view_display.node.course_allotment.default')
+    ->set('dependencies',$config_student_page_form_display_dependencies)
+    ->set('content',$config_student_page_view_display_fields)
+    ->save(TRUE);
+
+  /**********************************************************************************/
+
+  /**********************************************************************************/
+
+  $config_stduent_page_view_display = \Drupal::config('core.entity_form_display.node.course_allotment.default');
+
+  $config_student_page_form_display_dependencies=$config_stduent_page_view_display->get('dependencies');
+  if (($keys = array_search('field.field.node.course_allotment.field_student_ta_s_ref', $config_student_page_form_display_dependencies['config'])) !==false) {
+    unset($config_student_page_form_display_dependencies['config'][$keys]);
+  } 
+
+  $config_student_page_form_display_fields=$config_stduent_page_view_display->get('content');
+  if (array_key_exists("field_student_ta_s_ref", $config_student_page_form_display_fields)){
+    unset($config_student_page_form_display_fields['field_student_ta_s_ref']);
+  }
+
+  \Drupal::configFactory()
+  ->getEditable('core.entity_form_display.node.course_allotment.default')
+  ->set('dependencies',$config_student_page_form_display_dependencies)
+  ->set('content',$config_student_page_form_display_fields)
+  ->save(TRUE);
+
+  /**********************************************************************************/
+
+  \Drupal::configFactory()->getEditable('core.entity_form_display.node.student_page.default')->delete();
+  \Drupal::configFactory()->getEditable('core.entity_view_display.node.student_page.default')->delete();
+  \Drupal::configFactory()->getEditable('core.entity_view_display.node.student_page.teaser')->delete();
+  \Drupal::configFactory()->getEditable('field.field.node.student_page.body')->delete();
+  \Drupal::configFactory()->getEditable('field.field.node.student_page.field_admstatus')->delete();
+  \Drupal::configFactory()->getEditable('field.field.node.student_page.field_admyear')->delete();
+  \Drupal::configFactory()->getEditable('field.field.node.student_page.field_awards')->delete();
+  \Drupal::configFactory()->getEditable('field.field.node.student_page.field_building')->delete();
+  \Drupal::configFactory()->getEditable('field.field.node.student_page.field_curremp')->delete();
+  \Drupal::configFactory()->getEditable('field.field.node.student_page.field_degree')->delete();
+  \Drupal::configFactory()->getEditable('field.field.node.student_page.field_email')->delete();
+  \Drupal::configFactory()->getEditable('field.field.node.student_page.field_full_name')->delete();
+  \Drupal::configFactory()->getEditable('field.field.node.student_page.field_hostel')->delete();
+  \Drupal::configFactory()->getEditable('field.field.node.student_page.field_labno')->delete();
+  \Drupal::configFactory()->getEditable('field.field.node.student_page.field_mobile')->delete();
+  \Drupal::configFactory()->getEditable('field.field.node.student_page.field_pastemp')->delete();
+  \Drupal::configFactory()->getEditable('field.field.node.student_page.field_phone')->delete();
+  \Drupal::configFactory()->getEditable('field.field.node.student_page.field_photo')->delete();
+  \Drupal::configFactory()->getEditable('field.field.node.student_page.field_projects')->delete();
+  \Drupal::configFactory()->getEditable('field.field.node.student_page.field_puburl')->delete();
+  \Drupal::configFactory()->getEditable('field.field.node.student_page.field_qualexp')->delete();
+  \Drupal::configFactory()->getEditable('field.field.node.student_page.field_rollno')->delete();
+  \Drupal::configFactory()->getEditable('field.storage.node.field_admstatus')->delete();
+  \Drupal::configFactory()->getEditable('field.storage.node.field_admyear')->delete();
+  \Drupal::configFactory()->getEditable('field.storage.node.field_awards')->delete();
+  \Drupal::configFactory()->getEditable('field.storage.node.field_building')->delete();
+  \Drupal::configFactory()->getEditable('field.storage.node.field_curremp')->delete();
+  \Drupal::configFactory()->getEditable('field.storage.node.field_degree')->delete();
+  \Drupal::configFactory()->getEditable('field.storage.node.field_email')->delete();
+  \Drupal::configFactory()->getEditable('field.storage.node.field_full_name')->delete();
+  \Drupal::configFactory()->getEditable('field.storage.node.field_hostel')->delete();
+  \Drupal::configFactory()->getEditable('field.storage.node.field_labno')->delete();
+  \Drupal::configFactory()->getEditable('field.storage.node.field_mobile')->delete();
+  \Drupal::configFactory()->getEditable('field.storage.node.field_pastemp')->delete();
+  \Drupal::configFactory()->getEditable('field.storage.node.field_phone')->delete();
+  \Drupal::configFactory()->getEditable('field.storage.node.field_photo')->delete();
+  \Drupal::configFactory()->getEditable('field.storage.node.field_projects')->delete();
+  \Drupal::configFactory()->getEditable('field.storage.node.field_puburl')->delete();
+  \Drupal::configFactory()->getEditable('field.storage.node.field_qualexp')->delete();
+  \Drupal::configFactory()->getEditable('field.storage.node.field_rollno')->delete();
+  \Drupal::configFactory()->getEditable('node.type.student_page')->delete();
+  
+  \Drupal::configFactory()->getEditable('field.field.node.course_allotment.field_student_ta_s_ref')->delete();
+  \Drupal::configFactory()->getEditable('field.storage.node.field_student_ta_s_ref')->delete();
+
+}

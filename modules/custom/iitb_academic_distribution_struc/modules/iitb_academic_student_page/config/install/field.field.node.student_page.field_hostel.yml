@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hostel
+    - node.type.student_page
+  module:
+    - text
+id: node.student_page.field_hostel
+field_name: field_hostel
+entity_type: node
+bundle: student_page
+label: 'Hostel and Room Number'
+description: 'Enter your Hostel and Room Number. Eg, H1, #23.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

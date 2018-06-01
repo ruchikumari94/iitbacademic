@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_staffdesg
+    - node.type.staff_page
+  module:
+    - options
+id: node.staff_page.field_staffdesg
+field_name: field_staffdesg
+entity_type: node
+bundle: staff_page
+label: 'Staff Designation'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains iitb_academic_student_page.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function iitb_academic_student_page_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the iitb_academic_student_page module.
+    case 'help.page.iitb_academic_student_page':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('IITB Independent Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function iitb_academic_student_page_theme() {
+  return [
+    'iitb_academic_student_page' => [
+      'render element' => 'children',
+    ],
+  ];
+}

@@ -1,0 +1,111 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.staff_page.body
+    - field.field.node.staff_page.field_awards
+    - field.field.node.staff_page.field_building
+    - field.field.node.staff_page.field_email
+    - field.field.node.staff_page.field_full_name
+    - field.field.node.staff_page.field_labno
+    - field.field.node.staff_page.field_mobile
+    - field.field.node.staff_page.field_phone
+    - field.field.node.staff_page.field_photo
+    - field.field.node.staff_page.field_staffdesg
+    - node.type.staff_page
+  module:
+    - image
+    - name
+    - options
+    - text
+    - user
+id: node.staff_page.default
+targetEntityType: node
+bundle: staff_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_awards:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_building:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_email:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_full_name:
+    weight: 110
+    label: above
+    settings:
+      format: default
+      markup: false
+      output: default
+      multiple: default
+      multiple_delimiter: ', '
+      multiple_and: text
+      multiple_delimiter_precedes_last: never
+      multiple_el_al_min: '3'
+      multiple_el_al_first: '1'
+    third_party_settings: {  }
+    type: name_default
+    region: content
+  field_labno:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_mobile:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_phone:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_photo:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_staffdesg:
+    weight: 111
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }
