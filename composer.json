@@ -7,10 +7,10 @@
     "prefer-stable": true,
     "require": {
 	   "composer/installers": "^1.0.24",
-       "drupal/admin_toolbar": "1.x-dev",
-       "drupal/name": "1.x-dev",
-       "drupal/token": "1.x-dev",
-       "drupal/smtp" : "1.x-dev",
+       "drupal/admin_toolbar": "~1.24",
+       "drupal/name": "~1.0",
+       "drupal/token": "~1.3",
+       "drupal/smtp" : "~1.0",
        "drupal/computed_field" : "~2.0"
     },
     "repositories": [
