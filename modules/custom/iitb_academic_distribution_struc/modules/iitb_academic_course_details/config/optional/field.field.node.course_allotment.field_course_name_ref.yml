@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_course_name_ref
+    - node.type.course_allotment
+    - node.type.course_details
+id: node.course_allotment.field_course_name_ref
+field_name: field_course_name_ref
+entity_type: node
+bundle: course_allotment
+label: 'Course Name Ref'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      course_details: course_details
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

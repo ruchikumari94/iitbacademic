@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_course_code
+    - node.type.course_details
+  module:
+    - text
+id: node.course_details.field_course_code
+field_name: field_course_code
+entity_type: node
+bundle: course_details
+label: 'Course Code'
+description: 'A space is a must between the dept code "CL" and number "256". '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

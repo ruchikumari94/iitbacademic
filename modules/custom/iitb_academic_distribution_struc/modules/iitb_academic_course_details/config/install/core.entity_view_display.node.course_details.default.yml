@@ -1,0 +1,87 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.course_details.body
+    - field.field.node.course_details.field_course_code
+    - field.field.node.course_details.field_course_texts
+    - field.field.node.course_details.field_course_title
+    - field.field.node.course_details.field_lecture_credit
+    - field.field.node.course_details.field_practical_credit
+    - field.field.node.course_details.field_total_credits
+    - field.field.node.course_details.field_tutorial_credit
+    - node.type.course_details
+  module:
+    - computed_field
+    - options
+    - text
+    - user
+id: node.course_details.default
+targetEntityType: node
+bundle: course_details
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_course_code:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_course_texts:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_course_title:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_lecture_credit:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_practical_credit:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_total_credits:
+    weight: 108
+    label: above
+    settings:
+      cache_unit: -1
+      cache_duration: 1
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: computed_integer
+    region: content
+  field_tutorial_credit:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

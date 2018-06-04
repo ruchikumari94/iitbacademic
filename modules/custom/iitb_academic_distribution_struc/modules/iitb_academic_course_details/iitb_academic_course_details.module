@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains iitb_academic_course_details.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function iitb_academic_course_details_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the iitb_academic_course_details module.
+    case 'help.page.iitb_academic_course_details':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('IITB Independent Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function iitb_academic_course_details_theme() {
+  return [
+    'iitb_academic_course_details' => [
+      'render element' => 'children',
+    ],
+  ];
+}

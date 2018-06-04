@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lecture_credit
+    - node.type.course_details
+  module:
+    - options
+id: node.course_details.field_lecture_credit
+field_name: field_lecture_credit
+entity_type: node
+bundle: course_details
+label: 'Lecture Credits'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer
