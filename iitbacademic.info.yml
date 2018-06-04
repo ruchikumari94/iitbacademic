@@ -48,6 +48,7 @@ dependencies:
   - name
   - token
   - smtp
+  - computed_field
 themes:
   - bartik
   - seven

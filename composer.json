@@ -11,9 +11,7 @@
        "drupal/name": "1.x-dev",
        "drupal/token": "1.x-dev",
        "drupal/smtp" : "1.x-dev",
-       "drupal/computed_field" : "1.x-dev",
-       "drupal/computed_field_php_formatter" : "1.x-dev",
-       "drupal/computed_field_example_formatter" : "1.x-dev"
+       "drupal/computed_field" : "1.x-dev"
     },
     "repositories": [
         {
