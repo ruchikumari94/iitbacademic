@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_year_of_admission
+    - node.type.student_page
+id: node.student_page.field_student_year_of_admission
+field_name: field_student_year_of_admission
+entity_type: node
+bundle: student_page
+label: 'Student Year of Admission'
+description: 'Enter the year in YYYY format'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1975
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

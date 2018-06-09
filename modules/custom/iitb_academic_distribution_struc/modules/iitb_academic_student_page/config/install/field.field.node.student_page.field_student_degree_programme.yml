@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_degree_programme
+    - node.type.student_page
+  module:
+    - options
+id: node.student_page.field_student_degree_programme
+field_name: field_student_degree_programme
+entity_type: node
+bundle: student_page
+label: 'Student Degree Programme'
+description: 'Choose the Degree Programme/Project you are registered in IIT Bombay. '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

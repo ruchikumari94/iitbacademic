@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faculty_r_d_projects
+    - node.type.fac_page
+  module:
+    - text
+id: node.fac_page.field_faculty_r_d_projects
+field_name: field_faculty_r_d_projects
+entity_type: node
+bundle: fac_page
+label: 'Faculty R&D Projects'
+description: "Enter one research/technology project per box. You can disable the WYSIWYG editor (rich-text), and enter plaint text also. Please use only simple formatting tools, such as\r\n<ul> <li> bold </li> <li>italics </li> <li>lists </li> </ul>"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

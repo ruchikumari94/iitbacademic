@@ -3,22 +3,22 @@ status: true
 dependencies:
   config:
     - field.field.node.fac_page.body
-    - field.field.node.fac_page.field_affiliation
-    - field.field.node.fac_page.field_awards
-    - field.field.node.fac_page.field_building
-    - field.field.node.fac_page.field_category
-    - field.field.node.fac_page.field_coursestaught
-    - field.field.node.fac_page.field_detailed_info_link
-    - field.field.node.fac_page.field_email
-    - field.field.node.fac_page.field_facdesg
-    - field.field.node.fac_page.field_full_name
-    - field.field.node.fac_page.field_mobile
-    - field.field.node.fac_page.field_phone
-    - field.field.node.fac_page.field_photo
-    - field.field.node.fac_page.field_projects
-    - field.field.node.fac_page.field_publications_link
-    - field.field.node.fac_page.field_qualexp
-    - field.field.node.fac_page.field_room_no
+    - field.field.node.fac_page.field_faculty_affiliations
+    - field.field.node.fac_page.field_faculty_awards_and_fellows
+    - field.field.node.fac_page.field_faculty_background
+    - field.field.node.fac_page.field_faculty_building
+    - field.field.node.fac_page.field_faculty_category
+    - field.field.node.fac_page.field_faculty_courses_taught
+    - field.field.node.fac_page.field_faculty_designation
+    - field.field.node.fac_page.field_faculty_detailed_informati
+    - field.field.node.fac_page.field_faculty_email
+    - field.field.node.fac_page.field_faculty_full_name
+    - field.field.node.fac_page.field_faculty_mobile_number
+    - field.field.node.fac_page.field_faculty_phone_no
+    - field.field.node.fac_page.field_faculty_photo
+    - field.field.node.fac_page.field_faculty_publications_link
+    - field.field.node.fac_page.field_faculty_r_d_projects
+    - field.field.node.fac_page.field_faculty_room_no
     - image.style.thumbnail
     - node.type.fac_page
   module:
@@ -47,122 +47,122 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_affiliation:
-    weight: 131
+  field_faculty_affiliations:
+    weight: 138
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_awards:
-    weight: 132
+  field_faculty_awards_and_fellows:
+    weight: 139
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_building:
-    weight: 125
+  field_faculty_background:
+    weight: 140
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_category:
-    weight: 133
+  field_faculty_building:
+    weight: 141
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_faculty_category:
+    weight: 142
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
+    type: options_select
     region: content
-  field_coursestaught:
-    weight: 137
+  field_faculty_courses_taught:
+    weight: 143
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_detailed_info_link:
-    weight: 129
+  field_faculty_designation:
+    weight: 150
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_faculty_detailed_informati:
+    weight: 152
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
     region: content
-  field_email:
-    weight: 128
+  field_faculty_email:
+    weight: 153
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: email_default
     region: content
-  field_facdesg:
-    weight: 134
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
-    region: content
-  field_full_name:
-    weight: 123
+  field_faculty_full_name:
+    weight: 151
     settings: {  }
     third_party_settings: {  }
     type: name_default
     region: content
-  field_mobile:
-    weight: 127
+  field_faculty_mobile_number:
+    weight: 144
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_phone:
-    weight: 126
+  field_faculty_phone_no:
+    weight: 145
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_photo:
-    weight: 122
+  field_faculty_photo:
+    weight: 149
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
     region: content
-  field_projects:
-    weight: 136
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textfield
-    region: content
-  field_publications_link:
-    weight: 135
+  field_faculty_publications_link:
+    weight: 148
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
     region: content
-  field_qualexp:
-    weight: 130
+  field_faculty_r_d_projects:
+    weight: 147
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_room_no:
-    weight: 124
+  field_faculty_room_no:
+    weight: 146
     settings:
       placeholder: ''
     third_party_settings: {  }

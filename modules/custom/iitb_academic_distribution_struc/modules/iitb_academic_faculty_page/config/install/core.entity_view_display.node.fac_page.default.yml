@@ -3,22 +3,22 @@ status: true
 dependencies:
   config:
     - field.field.node.fac_page.body
-    - field.field.node.fac_page.field_affiliation
-    - field.field.node.fac_page.field_awards
-    - field.field.node.fac_page.field_building
-    - field.field.node.fac_page.field_category
-    - field.field.node.fac_page.field_coursestaught
-    - field.field.node.fac_page.field_detailed_info_link
-    - field.field.node.fac_page.field_email
-    - field.field.node.fac_page.field_facdesg
-    - field.field.node.fac_page.field_full_name
-    - field.field.node.fac_page.field_mobile
-    - field.field.node.fac_page.field_phone
-    - field.field.node.fac_page.field_photo
-    - field.field.node.fac_page.field_projects
-    - field.field.node.fac_page.field_publications_link
-    - field.field.node.fac_page.field_qualexp
-    - field.field.node.fac_page.field_room_no
+    - field.field.node.fac_page.field_faculty_affiliations
+    - field.field.node.fac_page.field_faculty_awards_and_fellows
+    - field.field.node.fac_page.field_faculty_background
+    - field.field.node.fac_page.field_faculty_building
+    - field.field.node.fac_page.field_faculty_category
+    - field.field.node.fac_page.field_faculty_courses_taught
+    - field.field.node.fac_page.field_faculty_designation
+    - field.field.node.fac_page.field_faculty_detailed_informati
+    - field.field.node.fac_page.field_faculty_email
+    - field.field.node.fac_page.field_faculty_full_name
+    - field.field.node.fac_page.field_faculty_mobile_number
+    - field.field.node.fac_page.field_faculty_phone_no
+    - field.field.node.fac_page.field_faculty_photo
+    - field.field.node.fac_page.field_faculty_publications_link
+    - field.field.node.fac_page.field_faculty_r_d_projects
+    - field.field.node.fac_page.field_faculty_room_no
     - node.type.fac_page
   module:
     - image
@@ -39,43 +39,57 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_affiliation:
-    weight: 111
+  field_faculty_affiliations:
+    weight: 118
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_awards:
-    weight: 112
+  field_faculty_awards_and_fellows:
+    weight: 119
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_building:
-    weight: 105
+  field_faculty_background:
+    weight: 120
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_category:
-    weight: 113
+  field_faculty_building:
+    weight: 121
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_faculty_category:
+    weight: 122
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
-  field_coursestaught:
-    weight: 117
+  field_faculty_courses_taught:
+    weight: 123
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_detailed_info_link:
-    weight: 109
+  field_faculty_designation:
+    weight: 130
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_faculty_detailed_informati:
+    weight: 132
     label: above
     settings:
       trim_length: 80
@@ -86,22 +100,15 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_email:
-    weight: 108
+  field_faculty_email:
+    weight: 133
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
-  field_facdesg:
-    weight: 114
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_full_name:
-    weight: 103
+  field_faculty_full_name:
+    weight: 131
     label: above
     settings:
       format: default
@@ -116,22 +123,22 @@ content:
     third_party_settings: {  }
     type: name_default
     region: content
-  field_mobile:
-    weight: 107
+  field_faculty_mobile_number:
+    weight: 124
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_phone:
-    weight: 106
+  field_faculty_phone_no:
+    weight: 125
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_photo:
-    weight: 102
+  field_faculty_photo:
+    weight: 129
     label: above
     settings:
       image_style: ''
@@ -139,15 +146,8 @@ content:
     third_party_settings: {  }
     type: image
     region: content
-  field_projects:
-    weight: 116
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_publications_link:
-    weight: 115
+  field_faculty_publications_link:
+    weight: 128
     label: above
     settings:
       trim_length: 80
@@ -158,15 +158,15 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_qualexp:
-    weight: 110
+  field_faculty_r_d_projects:
+    weight: 127
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_room_no:
-    weight: 104
+  field_faculty_room_no:
+    weight: 126
     label: above
     settings:
       thousand_separator: ''

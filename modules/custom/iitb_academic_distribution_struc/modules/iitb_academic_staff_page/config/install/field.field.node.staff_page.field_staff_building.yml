@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_staff_building
+    - node.type.staff_page
+  module:
+    - text
+id: node.staff_page.field_staff_building
+field_name: field_staff_building
+entity_type: node
+bundle: staff_page
+label: 'Staff Building'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

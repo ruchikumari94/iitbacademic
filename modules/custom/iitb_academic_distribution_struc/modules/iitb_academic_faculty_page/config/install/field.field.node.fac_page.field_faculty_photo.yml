@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faculty_photo
+    - node.type.fac_page
+  module:
+    - image
+id: node.fac_page.field_faculty_photo
+field_name: field_faculty_photo
+entity_type: node
+bundle: fac_page
+label: 'Faculty Photo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: facpage/photo
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: 200x300
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

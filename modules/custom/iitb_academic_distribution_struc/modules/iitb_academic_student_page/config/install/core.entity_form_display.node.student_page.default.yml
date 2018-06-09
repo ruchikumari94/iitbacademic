@@ -3,24 +3,24 @@ status: true
 dependencies:
   config:
     - field.field.node.student_page.body
-    - field.field.node.student_page.field_admstatus
-    - field.field.node.student_page.field_admyear
-    - field.field.node.student_page.field_awards
-    - field.field.node.student_page.field_building
-    - field.field.node.student_page.field_curremp
-    - field.field.node.student_page.field_degree
-    - field.field.node.student_page.field_email
-    - field.field.node.student_page.field_full_name
-    - field.field.node.student_page.field_hostel
-    - field.field.node.student_page.field_labno
-    - field.field.node.student_page.field_mobile
-    - field.field.node.student_page.field_pastemp
-    - field.field.node.student_page.field_phone
-    - field.field.node.student_page.field_photo
-    - field.field.node.student_page.field_projects
-    - field.field.node.student_page.field_puburl
-    - field.field.node.student_page.field_qualexp
-    - field.field.node.student_page.field_rollno
+    - field.field.node.student_page.field_student_admission_status
+    - field.field.node.student_page.field_student_awards_and_fellows
+    - field.field.node.student_page.field_student_background
+    - field.field.node.student_page.field_student_building
+    - field.field.node.student_page.field_student_current_employment
+    - field.field.node.student_page.field_student_degree_programme
+    - field.field.node.student_page.field_student_email
+    - field.field.node.student_page.field_student_employment_history
+    - field.field.node.student_page.field_student_full_name
+    - field.field.node.student_page.field_student_hostel_and_room_nu
+    - field.field.node.student_page.field_student_lab_room_number
+    - field.field.node.student_page.field_student_mobile_number
+    - field.field.node.student_page.field_student_phone_no
+    - field.field.node.student_page.field_student_photo
+    - field.field.node.student_page.field_student_public_profile_url
+    - field.field.node.student_page.field_student_r_d_projects
+    - field.field.node.student_page.field_student_roll_number
+    - field.field.node.student_page.field_student_year_of_admission
     - image.style.thumbnail
     - node.type.student_page
   module:
@@ -49,142 +49,142 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_admstatus:
-    weight: 125
+  field_student_admission_status:
+    weight: 140
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  field_admyear:
-    weight: 123
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: number
-    region: content
-  field_awards:
-    weight: 134
+  field_student_awards_and_fellows:
+    weight: 141
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_building:
-    weight: 128
+  field_student_background:
+    weight: 143
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_curremp:
-    weight: 136
+  field_student_building:
+    weight: 144
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_degree:
-    weight: 124
+  field_student_current_employment:
+    weight: 142
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_student_degree_programme:
+    weight: 145
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  field_email:
-    weight: 132
+  field_student_email:
+    weight: 146
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: email_default
     region: content
-  field_full_name:
-    weight: 139
+  field_student_employment_history:
+    weight: 147
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_student_full_name:
+    weight: 148
     settings: {  }
     third_party_settings: {  }
     type: name_default
     region: content
-  field_hostel:
-    weight: 129
+  field_student_hostel_and_room_nu:
+    weight: 149
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_labno:
-    weight: 127
+  field_student_lab_room_number:
+    weight: 150
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_mobile:
-    weight: 131
+  field_student_mobile_number:
+    weight: 151
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_pastemp:
-    weight: 137
+  field_student_phone_no:
+    weight: 152
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_phone:
-    weight: 130
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textfield
-    region: content
-  field_photo:
-    weight: 122
+  field_student_photo:
+    weight: 153
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
     region: content
-  field_projects:
-    weight: 135
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textfield
-    region: content
-  field_puburl:
-    weight: 138
+  field_student_public_profile_url:
+    weight: 154
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
     region: content
-  field_qualexp:
-    weight: 133
+  field_student_r_d_projects:
+    weight: 155
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_rollno:
-    weight: 126
+  field_student_roll_number:
+    weight: 156
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
+    region: content
+  field_student_year_of_admission:
+    weight: 157
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   path:
     type: path

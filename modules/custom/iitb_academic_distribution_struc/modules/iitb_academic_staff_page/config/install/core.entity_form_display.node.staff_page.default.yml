@@ -3,14 +3,14 @@ status: true
 dependencies:
   config:
     - field.field.node.staff_page.body
-    - field.field.node.staff_page.field_awards
-    - field.field.node.staff_page.field_building
-    - field.field.node.staff_page.field_email
-    - field.field.node.staff_page.field_full_name
-    - field.field.node.staff_page.field_labno
-    - field.field.node.staff_page.field_mobile
-    - field.field.node.staff_page.field_phone
-    - field.field.node.staff_page.field_photo
+    - field.field.node.staff_page.field_staff_awards_and_fellowshi
+    - field.field.node.staff_page.field_staff_building
+    - field.field.node.staff_page.field_staff_email
+    - field.field.node.staff_page.field_staff_full_name
+    - field.field.node.staff_page.field_staff_lab_room_number
+    - field.field.node.staff_page.field_staff_mobile_number
+    - field.field.node.staff_page.field_staff_phone_no
+    - field.field.node.staff_page.field_staff_photo
     - field.field.node.staff_page.field_staffdesg
     - image.style.thumbnail
     - node.type.staff_page
@@ -39,62 +39,62 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_awards:
-    weight: 129
+  field_staff_awards_and_fellowshi:
+    weight: 132
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_building:
-    weight: 125
+  field_staff_building:
+    weight: 133
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_email:
-    weight: 127
+  field_staff_email:
+    weight: 134
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: email_default
     region: content
-  field_full_name:
-    weight: 130
+  field_staff_full_name:
+    weight: 135
     settings: {  }
     third_party_settings: {  }
     type: name_default
     region: content
-  field_labno:
-    weight: 124
+  field_staff_lab_room_number:
+    weight: 136
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_mobile:
-    weight: 128
+  field_staff_mobile_number:
+    weight: 137
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_phone:
-    weight: 126
+  field_staff_phone_no:
+    weight: 138
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_photo:
-    weight: 122
+  field_staff_photo:
+    weight: 139
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail

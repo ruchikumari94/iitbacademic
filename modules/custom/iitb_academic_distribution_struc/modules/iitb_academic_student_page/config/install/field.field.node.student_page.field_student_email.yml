@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_email
+    - node.type.student_page
+id: node.student_page.field_student_email
+field_name: field_student_email
+entity_type: node
+bundle: student_page
+label: 'Student Email'
+description: 'Enter your email address, preferably long term (Gmail, Yahoo, etc). It will not be visible to the viewers of this page. Emails will be sent to you through a contact form. The department may also use it to contact you after you have completed your stay here.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

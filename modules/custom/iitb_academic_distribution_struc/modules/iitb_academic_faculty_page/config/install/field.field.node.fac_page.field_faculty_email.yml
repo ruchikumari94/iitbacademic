@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faculty_email
+    - node.type.fac_page
+id: node.fac_page.field_faculty_email
+field_name: field_faculty_email
+entity_type: node
+bundle: fac_page
+label: 'Faculty Email'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email
