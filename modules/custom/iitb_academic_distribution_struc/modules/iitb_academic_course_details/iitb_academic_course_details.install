@@ -138,7 +138,7 @@ function iitb_academic_course_details_uninstall(){
 	\Drupal::configFactory()->getEditable('field.storage.node.field_practical_credit')->delete();
 	\Drupal::configFactory()->getEditable('field.storage.node.field_total_credits')->delete();
 	\Drupal::configFactory()->getEditable('field.storage.node.field_tutorial_credit')->delete();
-	\Drupal::configFactory()->getEditable('node.type.course_details.yml')->delete();
+	\Drupal::configFactory()->getEditable('node.type.course_details')->delete();
 	
 	\Drupal::configFactory()->getEditable('field.field.node.course_allotment.field_course_name_ref')->delete();
 	\Drupal::configFactory()->getEditable('field.storage.node.field_course_name_ref')->delete();
