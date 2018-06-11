@@ -156,7 +156,7 @@ function iitb_academic_faculty_page_uninstall(){
 	\Drupal::configFactory()->getEditable('field.storage.node.field_faculty_publications_link')->delete();
 	\Drupal::configFactory()->getEditable('field.storage.node.field_faculty_r_d_projects')->delete();
 	\Drupal::configFactory()->getEditable('field.storage.node.field_faculty_room_no')->delete();
-	\Drupal::configFactory()->getEditable('node.type.fac_page.yml')->delete();
+	\Drupal::configFactory()->getEditable('node.type.fac_page')->delete();
 	
 	\Drupal::configFactory()->getEditable('field.field.node.course_allotment.field_instructor_s_ref')->delete();
 	\Drupal::configFactory()->getEditable('field.storage.node.field_instructor_s_ref')->delete();
