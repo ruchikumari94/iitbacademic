@@ -49,6 +49,7 @@ dependencies:
   - token
   - smtp
   - computed_field
+  - search_api_solr
 themes:
   - bartik
   - seven
