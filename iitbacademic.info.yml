@@ -43,17 +43,14 @@ dependencies:
   - views_ui
   - tour
   - automated_cron
- #contrib 
-  - admin_toolbar
+ #contrib
   - admin_toolbar_tools
   - admin_toolbar_links_access_filter
   - name
   - token
   - smtp
   - computed_field
-  - search_api
   - search_api_solr
-  - search_api_solr_defaults
 themes:
   - bartik
   - seven
