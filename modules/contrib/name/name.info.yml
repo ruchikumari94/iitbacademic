@@ -1,0 +1,15 @@
+name: Name Field
+type: module
+description: 'Defines a persons name field type.'
+# version: VERSION
+# core: 8.x
+dependencies:
+  - field
+package: Field types
+configure: name.settings
+
+# Information added by Drupal.org packaging script on 2018-03-03
+version: '8.x-1.0-rc1'
+core: '8.x'
+project: 'name'
+datestamp: 1520054287
