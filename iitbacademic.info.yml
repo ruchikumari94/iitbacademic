@@ -51,6 +51,7 @@ dependencies:
   - smtp
   - computed_field
   - search_api_solr
+  - search_api_autocomplete
 themes:
   - bartik
   - seven
