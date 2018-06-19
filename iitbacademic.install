@@ -79,3 +79,17 @@ function iitbacademic_install() {
   'vid' => 'department',
   ])->save();
 }
+
+/**
+ * Update 8101: Description
+ */
+function iitbacademic_update_8101() {
+
+  drupal_set_message(t("Facets update"));
+  \Drupal::service('module_installer')->install(array('facets'));
+
+  // Example of what to do if there is an error during your update.
+  if ($some_error_condition_met) {
+    throw new UpdateException('Something went wrong; here is what you should do.');
+  }
+}
