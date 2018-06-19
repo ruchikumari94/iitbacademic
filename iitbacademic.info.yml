@@ -2,7 +2,7 @@ name: iitbacademic
 core: 8.x
 type: profile
 description: 'IITB Academic Profile'
-version: '8.x-1.0'
+version: '8.x-1.2'
 
 distribution:
   name: 'IITB Academic Distribution'
@@ -53,6 +53,7 @@ dependencies:
   - search_api_solr
   - search_api_autocomplete
   - facets
+  - coffee
 themes:
   - bartik
   - seven

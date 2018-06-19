@@ -93,3 +93,14 @@ function iitbacademic_update_8101() {
     throw new UpdateException('Something went wrong; here is what you should do.');
   }
 }
+
+function iitbacademic_update_8102() {
+
+  drupal_set_message(t("Coffee update"));
+  \Drupal::service('module_installer')->install(array('coffee'));
+
+  // Example of what to do if there is an error during your update.
+  if ($some_error_condition_met) {
+    throw new UpdateException('Something went wrong; here is what you should do.');
+  }
+}
