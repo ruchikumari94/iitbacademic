@@ -74,10 +74,10 @@ function iitbacademic_install() {
 
   $node->save();
 
-  $term =Term::create([
-  'name' => 'term 1',
-  'vid' => 'department',
-  ])->save();
+  // $term =Term::create([
+  // 'name' => 'term 1',
+  // 'vid' => 'department',
+  // ])->save();
 }
 
 /**

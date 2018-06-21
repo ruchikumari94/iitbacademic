@@ -1,0 +1,21 @@
+<?php
+
+/**
+* Implements hook_uninstall().
+*/
+function iitb_academic_event_uninstall() {
+  // Load services.
+  $queryFactory = \Drupal::service('entity.query')
+  $nodeStorage  = \Drupal::entityManager()->getStorage('node');
+
+  // Query all entity.
+  $query = $queryFactory->get('node')
+    ->condition('type', 'event'); // <-- Change the type here for yours.
+  $nids = $query->execute();
+
+  // Delete entities.
+  if (!empty($nids)) {
+    $entities = $nodeStorage->loadMultiple($nids);
+    $nodeStorage->delete($entities);
+  }
+}

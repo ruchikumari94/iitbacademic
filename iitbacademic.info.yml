@@ -2,7 +2,7 @@ name: iitbacademic
 core: 8.x
 type: profile
 description: 'IITB Academic Profile'
-version: '8.x-1.4'
+version: '8.x-dev-master'
 
 distribution:
   name: 'IITB Academic Distribution'
@@ -55,6 +55,9 @@ dependencies:
   - facets
   - coffee
   - devel
+  - migrate_tools
+  - migrate_plus
+  - migrate_source_csv
 themes:
   - bartik
   - seven
