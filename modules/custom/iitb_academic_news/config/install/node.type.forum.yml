@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+  enforced:
+      module:
+        - iitb_academic_news
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'News Item'
+type: forum
+description: 'Provide news information to be put up on the main page.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

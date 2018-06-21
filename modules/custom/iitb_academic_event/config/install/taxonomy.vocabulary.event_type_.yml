@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+      module:
+        - iitb_academic_event
+name: 'Event Type'
+vid: event_type_
+description: 'It describe the types of Events'
+hierarchy: 0
+weight: 0

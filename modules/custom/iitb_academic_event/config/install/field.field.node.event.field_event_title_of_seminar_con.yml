@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_title_of_seminar_con
+    - node.type.event
+  module:
+    - options
+  enforced:
+      module:
+        - iitb_academic_event
+id: node.event.field_event_title_of_seminar_con
+field_name: field_event_title_of_seminar_con
+entity_type: node
+bundle: event
+label: 'Event Title of Seminar/Conference'
+description: 'Provide the detailed title of the Seminar/Conference here.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

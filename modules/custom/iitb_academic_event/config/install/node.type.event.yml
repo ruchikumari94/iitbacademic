@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+  enforced:
+      module:
+        - iitb_academic_event
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Event
+type: event
+description: "Create an event which can be given a start and end date, thus appearing in the events calendar. You can include talks, seminars, CEP courses, etc.\r\n"
+help: "For the title of the page (the first field below) please use a terse phrase (about three words), not the complete title of the talk.  Example: &quot;Pipeline Course&quot;, &quot;Optimisation School&quot;, &quot;Patankar's Talk&quot;, &quot;Nanomaterials Conference&quot; etc.\r\nThe title of the talk can be entered separately below.\r\nIf the event is not a talk, simply provide details in the &quot;Body&quot; section below, with links to appropriate pages.\r\n"
+new_revision: false
+preview_mode: 1
+display_submitted: true

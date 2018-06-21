@@ -1,0 +1,5 @@
+name: 'IITB Academic News'
+type: module
+description: 'News Content Type'
+core: 8.x
+package: 'Custom'

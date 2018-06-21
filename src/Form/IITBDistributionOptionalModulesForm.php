@@ -33,7 +33,8 @@ class IITBDistributionOptionalModulesForm extends FormBase {
       '#type' => 'checkboxes',
       '#title' => $this->t('Select Features'),
       '#description' => $this->t('Select Optional Features To Install'),
-      '#options' => ['iitb_academic_faculty' => $this->t('Faculty'), 'iitb_academic_department' => $this->t('Department'), 'iitb_academic_distribution_struc' => $this->t('IITB Academic Distribution Structure')],
+      '#options' => ['iitb_academic_faculty' => $this->t('Faculty'), 'iitb_academic_department' => $this->t('Department'), 'iitb_academic_distribution_struc' => $this->t('IITB Academic Distribution Structure'),
+        'iitb_academic_event' => $this->t('IITB Academic Event'), 'iitb_academic_news' => $this->t('IITB Academic News')],
       '#default_value' => Array(),
       '#weight' => '0',
     ];

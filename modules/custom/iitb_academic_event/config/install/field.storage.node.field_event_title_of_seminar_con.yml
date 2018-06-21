@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+  enforced:
+      module:
+        - iitb_academic_event
+id: node.field_event_title_of_seminar_con
+field_name: field_event_title_of_seminar_con
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Provide the detailed title of the Seminar/Conference here.'
+      label: 'Provide the detailed title of the Seminar/Conference here.'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
