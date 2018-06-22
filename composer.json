@@ -7,6 +7,7 @@
     "prefer-stable": true,
     "require": {
        "composer/installers": "^1.0.24",
+       "nitesh624/academix": "dev-master",
        "drupal/admin_toolbar": "~1.24",
        "drupal/name": "~1.0",
        "drupal/token": "~1.3",
