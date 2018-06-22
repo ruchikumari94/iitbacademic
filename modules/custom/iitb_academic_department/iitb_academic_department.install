@@ -247,26 +247,3 @@ function iitb_academic_department_uninstall() {
   \Drupal::configFactory()->getEditable('field.field.node.faculty.field_department_ref')->delete();
   \Drupal::configFactory()->getEditable('field.storage.node.field_department_ref')->delete();
 }
-
-/**
-* Implements hook_uninstall().
-*/
-function iitb_academic_department_uninstall() {
-  // Load services.
-
-  //drupal_set_message(t('This install function is working'),'error');
-  
-  $queryFactory = \Drupal::service('entity.query');
-  $nodeStorage  = \Drupal::entityManager()->getStorage('node');
-
-  // Query all entity.
-  $query = $queryFactory->get('node')
-    ->condition('type', 'department'); // <-- Change the type here for yours.
-  $nids = $query->execute();
-
-  // Delete entities.
-  if (!empty($nids)) {
-    $entities = $nodeStorage->loadMultiple($nids);
-    $nodeStorage->delete($entities);
-  }
-}
