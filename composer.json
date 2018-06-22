@@ -26,6 +26,10 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/nitesh624/academix"
         }
     ],
     "extra": {
