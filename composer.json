@@ -3,8 +3,6 @@
     "description": "IITB Academic Profile",
     "type": "drupal-profile",
     "license": "GPL-2.0-or-later",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "require": {
        "composer/installers": "^1.0.24",
        "nitesh624/academix": "dev-master",
