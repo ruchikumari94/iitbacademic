@@ -3,14 +3,17 @@
 /**
 * Implements hook_uninstall().
 */
-function iitb_academic_event_uninstall() {
+function iitb_academic_faculty_uninstall() {
   // Load services.
+
+  //drupal_set_message(t('This install function is working'),'error');
+  
   $queryFactory = \Drupal::service('entity.query');
   $nodeStorage  = \Drupal::entityManager()->getStorage('node');
 
   // Query all entity.
   $query = $queryFactory->get('node')
-    ->condition('type', 'event'); // <-- Change the type here for yours.
+    ->condition('type', 'faculty'); // <-- Change the type here for yours.
   $nids = $query->execute();
 
   // Delete entities.
