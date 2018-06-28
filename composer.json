@@ -18,7 +18,7 @@
        "drupal/facets": "~1.0",
        "drupal/coffee": "~1.0",
        "drupal/devel": "~1.0",
-       "drupal/migrate_tools": "~2.0",
+       "drupal/migrate_tools": "~4.0",
        "drupal/migrate_plus": "~2.0",
        "drupal/migrate_source_csv": "~2.2"
     },
