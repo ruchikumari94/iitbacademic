@@ -18,7 +18,7 @@
        "drupal/facets": "~1.0",
        "drupal/coffee": "~1.0",
        "drupal/devel": "~1.0",
-       "drupal/migrate_tools": "~2.0",
+       "drupal/migrate_tools": "2.0",
        "drupal/migrate_plus": "~2.0",
        "drupal/migrate_source_csv": "~2.2"
     },
@@ -35,7 +35,7 @@
     "extra": {
     	"installer-paths": {
         "profiles/contrib/iitbacademic/modules/contrib/{$name}": ["type:drupal-module"],
-        "profiles/contrib/iitbacademic/themes/{$name}": ["type:drupal-theme"]       
+        "profiles/contrib/iitbacademic/themes/{$name}": ["type:drupal-theme"]   
     	}
     }
 }
