@@ -1,0 +1,9 @@
+name: 'iitb_academic_research_glimpses'
+type: module
+description: 'IITB Sub Modules'
+core: 8.x
+package: 'Custom'
+dependecies:
+  enforced: 
+    module:
+      iitb_academic_faculty_page

@@ -5,15 +5,15 @@ dependencies:
     - menu_ui
   enforced: 
       module:
-        iitb_academic_faculty_page
+        iitb_academic_research_glimpses
 third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: 'Faculty Page'
-type: fac_page
-description: 'Content template for opening Faculty Page'
+name: 'Research Glimpses'
+type: research_glimpses
+description: ''
 help: ''
 new_revision: false
 preview_mode: 1
-display_submitted: true
+display_submitted: false

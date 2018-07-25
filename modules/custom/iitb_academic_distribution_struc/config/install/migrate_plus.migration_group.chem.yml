@@ -1,4 +1,0 @@
-id: chem
-label: Chem
-description: Custom data migrations for chem site.
-source_type: CSV files

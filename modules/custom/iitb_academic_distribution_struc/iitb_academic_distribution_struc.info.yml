@@ -6,9 +6,4 @@ package: 'Custom'
 dependencies:
   - name
   - text
-  - iitb_academic_course_allotment
-  - iitb_academic_course_details
-  - iitb_academic_faculty_page
-  - iitb_academic_staff_page
-  - iitb_academic_student_page
-  
+  - iitb_academic_research_glimpses

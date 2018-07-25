@@ -3,17 +3,16 @@ status: true
 dependencies:
   module:
     - node
-    - text
   enforced: 
       module:
-        iitb_academic_faculty_page
-id: node.field_faculty_courses_taught
-field_name: field_faculty_courses_taught
+        iitb_academic_research_glimpses
+id: node.field_faculty_name_ref
+field_name: field_faculty_name_ref
 entity_type: node
-type: text
+type: entity_reference
 settings:
-  max_length: 255
-module: text
+  target_type: node
+module: core
 locked: false
 cardinality: -1
 translatable: true

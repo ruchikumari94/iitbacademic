@@ -4,6 +4,9 @@ dependencies:
   module:
     - node
     - text
+  enforced: 
+      module:
+        iitb_academic_faculty_page
 id: node.field_faculty_mobile_number
 field_name: field_faculty_mobile_number
 entity_type: node

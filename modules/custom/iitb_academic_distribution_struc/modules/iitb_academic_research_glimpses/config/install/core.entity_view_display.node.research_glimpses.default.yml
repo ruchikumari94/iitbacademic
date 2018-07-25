@@ -1,0 +1,261 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.research_glimpses.body
+    - field.field.node.research_glimpses.field_category_glimpse
+    - field.field.node.research_glimpses.field_faculty_name_ref
+    - field.field.node.research_glimpses.field_image_glimpse
+    - node.type.research_glimpses
+  module:
+    - ds
+    - slick
+    - text
+    - user
+  enforced: 
+      module:
+        iitb_academic_research_glimpses
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: rglimpse-full
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - links
+        - field_image_glimpse
+        - body
+        - field_category_glimpse
+        - field_faculty_name_ref
+id: node.research_glimpses.default
+targetEntityType: node
+bundle: research_glimpses
+mode: default
+content:
+  body:
+    label: above
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h4
+            lbw-cl: 'uppercase dark-grey mb_5 node-field-label'
+            lbw-at: 'style="text-align:center;"'
+            lb-col: true
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    region: ds_content
+  field_category_glimpse:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h4
+            lbw-cl: 'uppercase dark-grey mb_5 node-field-label'
+            lbw-at: ''
+            lb-col: true
+            ow: true
+            ow-el: div
+            ow-cl: mb_20
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: entity_reference_label
+    region: ds_content
+  field_faculty_name_ref:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h4
+            lbw-cl: 'uppercase dark-grey mb_5 node-field-label'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: mb_20
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: entity_reference_label
+    region: ds_content
+  field_image_glimpse:
+    weight: 1
+    label: hidden
+    settings:
+      style: ''
+      optionset: default
+      optionset_thumbnail: ''
+      skin: default
+      skin_thumbnail: ''
+      image_style: max_650x650
+      thumbnail_style: ''
+      responsive_image_style: ''
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      media_switch: ''
+      ratio: ''
+      grid: null
+      grid_medium: null
+      grid_small: null
+      visible_items: null
+      layout: ''
+      thumbnail_caption: ''
+      cache: 0
+      override: true
+      overridables:
+        arrows: arrows
+        dots: dots
+        draggable: draggable
+        autoplay: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      sizes: ''
+      breakpoints:
+        xs:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        sm:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        md:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        lg:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        xl:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+      current_view_mode: default
+      background: false
+      caption:
+        title: '0'
+        alt: '0'
+      grid_header: ''
+      preserve_keys: false
+      skin_arrows: ''
+      skin_dots: ''
+      iframe_lazy: true
+      icon: ''
+      view_mode: ''
+      box_caption: ''
+      box_caption_custom: ''
+      box_style: ''
+      box_media_style: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: slick_image
+    region: ds_content
+  links:
+    weight: 0
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }

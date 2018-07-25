@@ -3,17 +3,17 @@ status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.fac_page
+    - node.type.research_glimpses
   module:
     - text
   enforced: 
       module:
-        iitb_academic_faculty_page
-id: node.fac_page.body
+        iitb_academic_research_glimpses
+id: node.research_glimpses.body
 field_name: body
 entity_type: node
-bundle: fac_page
-label: Body
+bundle: research_glimpses
+label: Description
 description: ''
 required: false
 translatable: true

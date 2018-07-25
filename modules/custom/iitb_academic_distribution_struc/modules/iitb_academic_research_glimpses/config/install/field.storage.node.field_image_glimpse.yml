@@ -7,9 +7,9 @@ dependencies:
     - node
   enforced: 
       module:
-        iitb_academic_faculty_page
-id: node.field_faculty_photo
-field_name: field_faculty_photo
+        iitb_academic_research_glimpses
+id: node.field_image_glimpse
+field_name: field_image_glimpse
 entity_type: node
 type: image
 settings:

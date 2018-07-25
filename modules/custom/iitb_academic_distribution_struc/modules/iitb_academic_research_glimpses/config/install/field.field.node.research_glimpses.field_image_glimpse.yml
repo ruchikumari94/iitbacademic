@@ -2,39 +2,39 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_faculty_photo
-    - node.type.fac_page
+    - field.storage.node.field_image_glimpse
+    - node.type.research_glimpses
   module:
     - image
   enforced: 
       module:
-        iitb_academic_faculty_page
-id: node.fac_page.field_faculty_photo
-field_name: field_faculty_photo
+        iitb_academic_research_glimpses
+id: node.research_glimpses.field_image_glimpse
+field_name: field_image_glimpse
 entity_type: node
-bundle: fac_page
-label: 'Faculty Photo'
+bundle: research_glimpses
+label: Image
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: facpage/photo
+  file_directory: 'research_glimpses/[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
-  max_resolution: 200x300
+  max_resolution: ''
   min_resolution: ''
   alt_field: true
   alt_field_required: true
-  title_field: false
+  title_field: true
   title_field_required: false
   default_image:
-    uuid: ''
+    uuid: 9b370478-a06b-4bac-98dd-a9876a68293c
     alt: ''
     title: ''
-    width: null
-    height: null
+    width: 350
+    height: 350
   handler: 'default:file'
   handler_settings: {  }
 field_type: image

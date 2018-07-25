@@ -1,5 +1,0 @@
-name: 'IITB Academic Staff Page'
-type: module
-description: 'IITB Independent Module'
-core: 8.x
-package: 'Custom'

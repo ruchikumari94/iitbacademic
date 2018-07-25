@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category_glimpse
+    - node.type.research_glimpses
+    - taxonomy.vocabulary.research_glimpse_category
+  enforced: 
+      module:
+        iitb_academic_research_glimpses
+id: node.research_glimpses.field_category_glimpse
+field_name: field_category_glimpse
+entity_type: node
+bundle: research_glimpses
+label: Category
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      research_glimpse_category: research_glimpse_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

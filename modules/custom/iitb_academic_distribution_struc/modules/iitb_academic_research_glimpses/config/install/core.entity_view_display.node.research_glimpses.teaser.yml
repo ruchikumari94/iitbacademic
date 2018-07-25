@@ -3,17 +3,17 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.fac_page.body
-    - node.type.fac_page
+    - field.field.node.research_glimpses.body
+    - node.type.research_glimpses
   module:
     - text
     - user
   enforced: 
       module:
-        iitb_academic_faculty_page
-id: node.fac_page.teaser
+        iitb_academic_research_glimpses
+id: node.research_glimpses.teaser
 targetEntityType: node
-bundle: fac_page
+bundle: research_glimpses
 mode: teaser
 content:
   body:

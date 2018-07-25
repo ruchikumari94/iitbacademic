@@ -3,17 +3,17 @@ status: true
 dependencies:
   module:
     - node
-    - text
+    - taxonomy
   enforced: 
       module:
-        iitb_academic_faculty_page
-id: node.field_faculty_building
-field_name: field_faculty_building
+        iitb_academic_research_glimpses
+id: node.field_category_glimpse
+field_name: field_category_glimpse
 entity_type: node
-type: text
+type: entity_reference
 settings:
-  max_length: 255
-module: text
+  target_type: taxonomy_term
+module: core
 locked: false
 cardinality: 1
 translatable: true

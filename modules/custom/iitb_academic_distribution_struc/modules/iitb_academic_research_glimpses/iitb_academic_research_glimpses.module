@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains iitb_academic_research_glimpses.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function iitb_academic_research_glimpses_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the iitb_academic_research_glimpses module.
+    case 'help.page.iitb_academic_research_glimpses':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('IITB Sub Modules') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function iitb_academic_research_glimpses_theme() {
+  return [
+    'iitb_academic_research_glimpses' => [
+      'render element' => 'children',
+    ],
+  ];
+}
