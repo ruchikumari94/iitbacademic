@@ -12,9 +12,9 @@ dependencies:
     - slick
     - text
     - user
-  enforced: 
-      module:
-        iitb_academic_research_glimpses
+  enforced:
+    module:
+      - iitb_academic_research_glimpses
 third_party_settings:
   ds:
     layout:

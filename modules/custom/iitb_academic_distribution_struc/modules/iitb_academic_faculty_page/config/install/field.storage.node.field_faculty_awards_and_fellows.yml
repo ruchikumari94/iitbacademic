@@ -4,9 +4,9 @@ dependencies:
   module:
     - node
     - text
-  enforced: 
-      module:
-        iitb_academic_faculty_page
+  enforced:
+    module:
+      - iitb_academic_faculty_page
 id: node.field_faculty_awards_and_fellows
 field_name: field_faculty_awards_and_fellows
 entity_type: node

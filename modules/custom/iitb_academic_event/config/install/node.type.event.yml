@@ -4,8 +4,8 @@ dependencies:
   module:
     - menu_ui
   enforced:
-      module:
-        - iitb_academic_event
+    module:
+      - iitb_academic_event
 third_party_settings:
   menu_ui:
     available_menus: {  }

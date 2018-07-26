@@ -5,8 +5,8 @@ dependencies:
     - node
     - taxonomy
   enforced:
-      module:
-        - iitb_academic_event
+    module:
+      - iitb_academic_event
 id: node.field_event_types
 field_name: field_event_types
 entity_type: node

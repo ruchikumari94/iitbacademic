@@ -7,8 +7,8 @@ dependencies:
   module:
     - text
   enforced:
-      module:
-        - iitb_academic_news
+    module:
+      - iitb_academic_news
 id: node.forum.body
 field_name: body
 entity_type: node

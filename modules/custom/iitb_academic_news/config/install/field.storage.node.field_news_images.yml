@@ -6,8 +6,8 @@ dependencies:
     - image
     - node
   enforced:
-      module:
-        - iitb_academic_news
+    module:
+      - iitb_academic_news
 id: node.field_news_images
 field_name: field_news_images
 entity_type: node

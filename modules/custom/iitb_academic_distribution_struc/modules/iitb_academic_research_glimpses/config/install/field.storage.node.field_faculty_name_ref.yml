@@ -3,9 +3,9 @@ status: true
 dependencies:
   module:
     - node
-  enforced: 
-      module:
-        iitb_academic_research_glimpses
+  enforced:
+    module:
+      - iitb_academic_research_glimpses
 id: node.field_faculty_name_ref
 field_name: field_faculty_name_ref
 entity_type: node

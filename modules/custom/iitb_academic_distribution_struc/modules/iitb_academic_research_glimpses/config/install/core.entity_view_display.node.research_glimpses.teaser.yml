@@ -8,9 +8,9 @@ dependencies:
   module:
     - text
     - user
-  enforced: 
-      module:
-        iitb_academic_research_glimpses
+  enforced:
+    module:
+      - iitb_academic_research_glimpses
 id: node.research_glimpses.teaser
 targetEntityType: node
 bundle: research_glimpses

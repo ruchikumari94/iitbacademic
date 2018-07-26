@@ -13,8 +13,8 @@ dependencies:
     - text
     - user
   enforced:
-      module:
-        - iitb_academic_news
+    module:
+      - iitb_academic_news
 id: node.forum.default
 targetEntityType: node
 bundle: forum

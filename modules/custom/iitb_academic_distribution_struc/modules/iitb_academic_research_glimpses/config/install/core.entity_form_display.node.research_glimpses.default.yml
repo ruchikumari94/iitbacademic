@@ -12,9 +12,9 @@ dependencies:
     - image
     - path
     - text
-  enforced: 
-      module:
-        iitb_academic_research_glimpses
+  enforced:
+    module:
+      - iitb_academic_research_glimpses
 id: node.research_glimpses.default
 targetEntityType: node
 bundle: research_glimpses

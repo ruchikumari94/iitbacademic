@@ -6,9 +6,9 @@ dependencies:
     - node.type.fac_page
   module:
     - link
-  enforced: 
-      module:
-        iitb_academic_faculty_page
+  enforced:
+    module:
+      - iitb_academic_faculty_page
 id: node.fac_page.field_faculty_publications_link
 field_name: field_faculty_publications_link
 entity_type: node

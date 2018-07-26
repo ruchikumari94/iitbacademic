@@ -6,8 +6,8 @@ dependencies:
     - node.type.forum
     - taxonomy.vocabulary.news_type
   enforced:
-      module:
-        - iitb_academic_news
+    module:
+      - iitb_academic_news
 id: node.forum.field_news_type
 field_name: field_news_type
 entity_type: node

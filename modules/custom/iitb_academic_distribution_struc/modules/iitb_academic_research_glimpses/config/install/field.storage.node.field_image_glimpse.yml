@@ -5,9 +5,9 @@ dependencies:
     - file
     - image
     - node
-  enforced: 
-      module:
-        iitb_academic_research_glimpses
+  enforced:
+    module:
+      - iitb_academic_research_glimpses
 id: node.field_image_glimpse
 field_name: field_image_glimpse
 entity_type: node

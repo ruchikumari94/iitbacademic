@@ -3,9 +3,9 @@ status: true
 dependencies:
   module:
     - node
-  enforced: 
-      module:
-        iitb_academic_faculty_page
+  enforced:
+    module:
+      - iitb_academic_faculty_page
 id: node.field_faculty_email
 field_name: field_faculty_email
 entity_type: node

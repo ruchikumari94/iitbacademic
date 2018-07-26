@@ -5,8 +5,8 @@ dependencies:
     - node
     - options
   enforced:
-      module:
-        - iitb_academic_event
+    module:
+      - iitb_academic_event
 id: node.field_event_title_of_seminar_con
 field_name: field_event_title_of_seminar_con
 entity_type: node

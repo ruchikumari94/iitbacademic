@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies:
   enforced:
-      module:
-        - iitb_academic_news
+    module:
+      - iitb_academic_news
 name: 'News Type'
 vid: news_type
 description: 'Types of News will be listed'

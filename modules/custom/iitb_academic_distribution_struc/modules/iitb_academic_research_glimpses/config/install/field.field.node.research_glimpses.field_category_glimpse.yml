@@ -5,9 +5,9 @@ dependencies:
     - field.storage.node.field_category_glimpse
     - node.type.research_glimpses
     - taxonomy.vocabulary.research_glimpse_category
-  enforced: 
-      module:
-        iitb_academic_research_glimpses
+  enforced:
+    module:
+      - iitb_academic_research_glimpses
 id: node.research_glimpses.field_category_glimpse
 field_name: field_category_glimpse
 entity_type: node

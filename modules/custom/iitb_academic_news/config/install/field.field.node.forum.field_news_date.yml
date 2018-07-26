@@ -7,8 +7,8 @@ dependencies:
   module:
     - datetime
   enforced:
-      module:
-        - iitb_academic_news
+    module:
+      - iitb_academic_news
 id: node.forum.field_news_date
 field_name: field_news_date
 entity_type: node

@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies: {  }
   enforced: 
-      module:
-        iitb_academic_research_glimpses
+    module:
+      - iitb_academic_research_glimpses
 name: 'Research Glimpse Category'
 vid: research_glimpse_category
 description: 'Categorization of Research Glimpse '

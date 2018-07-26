@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies:
   enforced:
-      module:
-        - iitb_academic_event
+    module:
+      - iitb_academic_event
 name: 'Event Type'
 vid: event_type_
 description: 'It describe the types of Events'

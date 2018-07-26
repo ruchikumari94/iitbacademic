@@ -4,9 +4,9 @@ dependencies:
   module:
     - node
     - options
-  enforced: 
-      module:
-        iitb_academic_faculty_page
+  enforced:
+    module:
+      - iitb_academic_faculty_page
 id: node.field_faculty_designation
 field_name: field_faculty_designation
 entity_type: node

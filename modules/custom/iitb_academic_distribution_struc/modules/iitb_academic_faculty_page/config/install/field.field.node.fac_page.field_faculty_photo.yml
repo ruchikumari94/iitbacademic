@@ -6,9 +6,9 @@ dependencies:
     - node.type.fac_page
   module:
     - image
-  enforced: 
-      module:
-        iitb_academic_faculty_page
+  enforced:
+    module:
+      - iitb_academic_faculty_page
 id: node.fac_page.field_faculty_photo
 field_name: field_faculty_photo
 entity_type: node

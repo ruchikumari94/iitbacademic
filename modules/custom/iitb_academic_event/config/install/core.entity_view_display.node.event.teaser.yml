@@ -9,8 +9,8 @@ dependencies:
     - text
     - user
   enforced:
-      module:
-        - iitb_academic_event
+    module:
+      - iitb_academic_event
 id: node.event.teaser
 targetEntityType: node
 bundle: event

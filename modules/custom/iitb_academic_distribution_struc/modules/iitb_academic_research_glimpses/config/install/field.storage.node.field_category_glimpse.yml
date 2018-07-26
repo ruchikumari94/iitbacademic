@@ -4,9 +4,9 @@ dependencies:
   module:
     - node
     - taxonomy
-  enforced: 
-      module:
-        iitb_academic_research_glimpses
+  enforced:
+    module:
+      - iitb_academic_research_glimpses
 id: node.field_category_glimpse
 field_name: field_category_glimpse
 entity_type: node
