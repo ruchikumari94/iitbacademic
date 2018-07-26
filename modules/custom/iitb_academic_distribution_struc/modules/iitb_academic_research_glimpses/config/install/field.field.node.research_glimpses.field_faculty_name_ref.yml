@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_faculty_name_ref
-    - node.type.faculty_profiles
     - node.type.research_glimpses
   enforced:
     module:
