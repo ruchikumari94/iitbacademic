@@ -58,6 +58,8 @@ dependencies:
   - migrate_tools
   - migrate_plus
   - migrate_source_csv
+  - slick
+  - ds
 themes:
   - bartik
   - seven
